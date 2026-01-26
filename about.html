@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duncan Phoenix | Official Artist Site</title>
+    <style>
+        :root {
+            --primary-red: #cc0000;
+            --dark-bg: #0a0a0a;
+            --sidebar-bg: #111;
+            --text-light: #f4f4f4;
+            --accent-gray: #222;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            display: flex; /* Sidebar layout */
+        }
+
+        /* Side Menu Panel */
+        nav.sidebar {
+            width: 250px;
+            height: 100vh;
+            background: var(--sidebar-bg);
+            position: fixed;
+            border-right: 2px solid var(--primary-red);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .nav-links { list-style: none; padding: 0; }
+        .nav-links li { margin: 20px 0; }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-red); }
+
+        /* Main Content Area */
+        main {
+            margin-left: 290px; /* Offset for fixed sidebar */
+            flex-grow: 1;
+            padding: 0 20px 40px 0;
+        }
+
+        header {
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-container { max-width: 800px; margin: 40px auto; }
+        .track-list { background: var(--accent-gray); padding: 20px; border-radius: 8px; }
+        .track-item { display: flex; padding: 10px; border-bottom: 1px solid #333; }
+        .track-number { width: 30px; color: var(--primary-red); }
+        
+        /* Placeholder for new topics */
+        .content-block { padding: 40px 0; border-top: 1px solid #333; }
+        h2 { border-left: 4px solid var(--primary-red); padding-left: 15px; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="nav-logo">Duncan Phoenix</div>
+        <ul class="nav-links">
+            <li><a href="about.html">About Artist</a></li>
+            <li><a href="playlist.html">Music Playlist</a></li>
+            <li><a href="Lyrics&Poems.html">Lyrics/Poems</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <br>
+            <li><img src="images/git.jpg" style="width:50%;"</li>
+        </ul>
+    </nav>
+
+    <main>
+        <header>
+            <img src="images/fireguitar.jpg" style="width:70%;">
+            <h1 style="font-size: 3rem;">DUNCAN PHOENIX</h1>
+            <p style="color: var(--primary-red); font-weight: bold;">ROCK GUITARIST // 2026 TOUR</p>
+        </header>
+
+        <div class="section-container">
+            <!-- About Artist Section -->
+            <section id="about" class="content-block">
+                <h2>About Artist</h2>
+                <p>Duncan Phoenix is a visionary rock guitarist. His 2026 sound is a fusion of digital distortion and classic tube-amp warmth.</p>
+            </section>
+
+   
+
+            <!-- Gallery Section -->
+            <section id="gallery" class="content-block">
+                <h2>Gallery</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div style="background: #333; height: 150px;"><img src="images/_DSC3303.JPG">Venice - train station</div>
+                    <div style="background: #333; height: 150px;"><img src="images/flight_of_the_wasp.jpg">flight_of_the_wasp</div>
+                </div>
+            </section>
+
+     
+        </div>
+    </main>
+</body>
+</html>
