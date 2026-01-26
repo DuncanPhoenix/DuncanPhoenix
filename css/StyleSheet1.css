@@ -12,12 +12,6 @@
 	--color-text: #fff;
 }
 
-body {
-	background: var(--color-background);
-	color: var(--color-text);
-	font-family: monospace;
-	line-height: 1.5;
-}
 h2 {
 	font-size: 1.5rem;
 	line-height: 1.2;
@@ -141,3 +135,4 @@ input:checked + svg {
 	line-height: 1;
 	rotate: 45deg;
 }
+
