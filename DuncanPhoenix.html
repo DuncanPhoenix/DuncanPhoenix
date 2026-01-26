@@ -3,144 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duncan Phoenix | Rock Guitarist</title>
+    <title>Duncan Phoenix | Official Artist Site</title>
     <style>
         :root {
             --primary-red: #cc0000;
             --dark-bg: #0a0a0a;
+            --sidebar-bg: #111;
             --text-light: #f4f4f4;
             --accent-gray: #222;
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-light);
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
+            display: flex; /* Sidebar layout */
+        }
+
+        /* Side Menu Panel */
+        nav.sidebar {
+            width: 250px;
+            height: 100vh;
+            background: var(--sidebar-bg);
+            position: fixed;
+            border-right: 2px solid var(--primary-red);
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .nav-links { list-style: none; padding: 0; }
+        .nav-links li { margin: 20px 0; }
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--primary-red); }
+
+        /* Main Content Area */
+        main {
+            margin-left: 290px; /* Offset for fixed sidebar */
+            flex-grow: 1;
+            padding: 0 20px 40px 0;
         }
 
         header {
-            height: 60vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com') no-repeat center center/cover;
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com');
+            background-size: cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            border-bottom: 5px solid var(--primary-red);
         }
 
-        h1 { font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: 4px; }
-        .subtitle { font-size: 1.5rem; color: var(--primary-red); font-weight: bold; }
-
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-
-        .bio-section { margin-bottom: 60px; text-align: center; }
-
-        .playlist-container {
-            background: var(--accent-gray);
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .track-list { list-style: none; padding: 0; }
+        .section-container { max-width: 800px; margin: 40px auto; }
+        .track-list { background: var(--accent-gray); padding: 20px; border-radius: 8px; }
+        .track-item { display: flex; padding: 10px; border-bottom: 1px solid #333; }
+        .track-number { width: 30px; color: var(--primary-red); }
         
-        .track-item {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #333;
-            transition: background 0.3s;
-        }
-
-        .track-item:hover { background: #333; }
-        .track-number { width: 40px; color: var(--primary-red); font-weight: bold; }
-        .track-name { flex-grow: 1; font-size: 1.1rem; }
-        .play-btn { color: var(--text-light); text-decoration: none; font-size: 0.9rem; border: 1px solid var(--primary-red); padding: 5px 12px; border-radius: 20px; }
-
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
+        /* Placeholder for new topics */
+        .content-block { padding: 40px 0; border-top: 1px solid #333; }
+        h2 { border-left: 4px solid var(--primary-red); padding-left: 15px; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Duncan Phoenix</h1>
-        <p class="subtitle">Electric Guitarist | Modern Rock</p>
-    </header>
+    <nav class="sidebar">
+        <div class="nav-logo">Duncan Phoenix</div>
+        <ul class="nav-links">
+            <li><a href="#about">About Artist</a></li>
+            <li><a href="#music">Music Playlist</a></li>
+            <li><a href="#lyrics">Lyrics/Poems</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div class="container">
-        <section class="bio-section">
-            <h2>The Sound</h2>
-            <p>Duncan Phoenix is a high-octane rock guitarist known for blending soulful blues phrasing with aggressive modern riffs. Based on the 2026 circuit, his sound captures the raw energy of classic rock revival with a futuristic digital edge.</p>
-        </section>
+    <main>
+        <header>
+            <h1 style="font-size: 3rem;">DUNCAN PHOENIX</h1>
+            <p style="color: var(--primary-red); font-weight: bold;">ROCK GUITARIST // 2026 TOUR</p>
+        </header>
 
-        <section class="playlist-section">
-            <h2 style="text-align: center;">Latest Tracks</h2>
-            <div class="playlist-container">
+        <div class="section-container">
+            <!-- About Artist Section -->
+            <section id="about" class="content-block">
+                <h2>About Artist</h2>
+                <p>Duncan Phoenix is a visionary rock guitarist. His 2026 sound is a fusion of digital distortion and classic tube-amp warmth.</p>
+            </section>
+
+            <!-- Playlist Section -->
+            <section id="music" class="content-block">
+                <h2>10 Songs Playlist</h2>
                 <div class="track-list">
-                    <!-- 10 Song Playlist -->
-                    <div class="track-item">
-                        <span class="track-number">01</span>
-                        <span class="track-name">Ashes to Ignition</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">02</span>
-                        <span class="track-name">Steel Horizon</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">03</span>
-                        <span class="track-name">Midnight Feedback</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">04</span>
-                        <span class="track-name">Neon Overdrive</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">05</span>
-                        <span class="track-name">The Phoenix Rises</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">06</span>
-                        <span class="track-name">Strings of Chaos</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">07</span>
-                        <span class="track-name">Ghost Note Blues</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">08</span>
-                        <span class="track-name">Amphetamine Dream</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">09</span>
-                        <span class="track-name">Wired Soul</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
-                    <div class="track-item">
-                        <span class="track-number">10</span>
-                        <span class="track-name">Voltage Prophet</span>
-                        <a href="#" class="play-btn">Play</a>
-                    </div>
+                    <div class="track-item"><span class="track-number">01</span> Ashes to Ignition</div>
+                    <div class="track-item"><span class="track-number">02</span> Steel Horizon</div>
+                    <div class="track-item"><span class="track-number">03</span> Midnight Feedback</div>
+                    <div class="track-item"><span class="track-number">04</span> Neon Overdrive</div>
+                    <div class="track-item"><span class="track-number">05</span> The Phoenix Rises</div>
+                    <div class="track-item"><span class="track-number">06</span> Strings of Chaos</div>
+                    <div class="track-item"><span class="track-number">07</span> Ghost Note Blues</div>
+                    <div class="track-item"><span class="track-number">08</span> Amphetamine Dream</div>
+                    <div class="track-item"><span class="track-number">09</span> Wired Soul</div>
+                    <div class="track-item"><span class="track-number">10</span> Voltage Prophet</div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
 
-    <footer>
-        &copy; 2026 Duncan Phoenix Music. Built for the stage.
-    </footer>
+            <!-- Lyrics/Poems Section -->
+            <section id="lyrics" class="content-block">
+                <h2>Lyrics & Poems</h2>
+                <p><em>(Poem: "The Copper String")</em><br>
+                Cold metal bites the fingertip,<br>
+                A spark within the dark...</p>
+            </section>
 
+            <!-- Gallery Section -->
+            <section id="gallery" class="content-block">
+                <h2>Gallery</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div style="background: #333; height: 150px;">Photo 1</div>
+                    <div style="background: #333; height: 150px;">Photo 2</div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="content-block">
+                <h2>Contact</h2>
+                <p>Booking: management@duncanphoenix.com</p>
+            </section>
+        </div>
+    </main>
 </body>
 </html>
+
