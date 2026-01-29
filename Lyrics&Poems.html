@@ -1,13 +1,5 @@
-xo<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="css/StyleSheet.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="js/script1.js"></script>
-	
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,17 +15,41 @@ xo<!DOCTYPE html>
 
         body {
             font-family: 'Segoe UI', sans-serif;
-            background-color: var(black);
+            background-color: black;
             color: var(--text-light);
             margin: 0;
             display: flex; /* Sidebar layout */
         }
-
+      
         /* Side Menu Panel */
+		.bg-img {
+  /* The image used */
+  background-image: url("images/fstripev.png" );	
+  
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+
         nav.sidebar {
-            width: 250px;
+            width: 220px;
             height: 100vh;
-            background: var(--sidebar-bg);
+            background: var(black);
             position: fixed;
             border-right: 2px solid var(--primary-red);
             display: flex;
@@ -67,9 +83,9 @@ xo<!DOCTYPE html>
         }
 
         header {
-            height: 50vh;
+            height: 10vh;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com');
+                        url('');
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -78,13 +94,14 @@ xo<!DOCTYPE html>
         }
 
         .section-container { max-width: 800px; margin: 40px auto; }
-        .track-list { background: var(--accent-gray); padding: 20px; border-radius: 8px; }
+        .track-list { background: #191970; padding: 20px; border-radius: 8px; opacity: 0.6; }
         .track-item { display: flex; padding: 10px; border-bottom: 1px solid #333; }
-        .track-number { width: 30px; color: var(--primary-red); }
+        .track-number { width: 30px; color: var(#6495ED); }
         
         /* Placeholder for new topics */
         .content-block { padding: 40px 0; border-top: 1px solid #333; }
-        h2 { border-left: 4px solid var(--primary-red); padding-left: 15px; text-transform: uppercase; }
+         h2 { border-left: 4px solid var(--primary-red); padding-left: 15px; text-transform: uppercase; }
+		
 		.foot { position: absolute; bottom: 0; height: 240px; background: black; width: inherit; }
     </style>
 </head>
@@ -117,6 +134,7 @@ xo<!DOCTYPE html>
 	     </div>
        </nav>
 	 </div>
+		
 
     <main>
         <header>
